@@ -21,17 +21,20 @@ export class ViewSlideComponent {
       imgCapt: 'Third Slide',
     },
   ];
+  //bootstrap slider pre-define code
   constructor(config: NgbCarouselConfig) {
     config.interval = 2000;
     config.keyboard = true;
     config.pauseOnHover = true;
   }
+  //reactive form data validate and store
   ngOnInit(): void {
     this.imgForm = new FormGroup({
       imgUrl: new FormControl('',Validators.required),
       imgCapt: new FormControl('',Validators.required),
     });
   }
+  //onSubmit function for adding new slide to the slider
   onSubmit() {
     const newImg = this.imgForm.value;
     const newImgObj = {
@@ -40,6 +43,7 @@ export class ViewSlideComponent {
     };
     this.images.push(newImgObj);
   }
+  //Delete function to delete slide
   onDelete(index: number) {
     this.images.splice(index, 1);
   }
