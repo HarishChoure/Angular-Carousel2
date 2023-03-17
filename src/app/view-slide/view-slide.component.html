@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  </head>
+  <body>
+    <h1>Angular Carousel</h1>
+    <div class="container-fluid">
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="wrapper" id="slider">
+            <img [src]="image.imgUrl" alt="Image path is Unknown" />
+          </div>
+          <div class="carousel-caption">
+            <h3>{{ image.imgCapt }}</h3>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+
+    <!-- Added slide -->
+    <h1>Added slide</h1>
+    <div class="slide-num">
+      <div *ngFor="let item of images; let i = index">
+        <ul>
+          <li>
+            Slide - {{ i + 1 }} <button (click)="onDelete(i)" id="trash"><i class="fa-solid fa-trash-can" ></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Form-->
+    <h1>Add new slide</h1>
+    <div class="container">
+      <form [formGroup]="imgForm" (ngSubmit)="onSubmit()">
+        <diV class="div1">
+          <label for="img-url">Image url</label>
+          <input type="text" id="img-url" formControlName="imgUrl" />
+        </diV>
+        <diV class="div1">
+          <label for="slide-caption">Slide caption</label>
+          <input type="text" id="slide-caption" formControlName="imgCapt" />
+        </diV>
+        <div class="div-button">
+          <button class="form-button">Add slide</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

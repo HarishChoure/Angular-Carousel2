@@ -1,0 +1,52 @@
+h1{
+    margin-left: 6rem;
+}
+#slider{
+    display: flex;
+    margin:0%;
+    img{
+        height: 30em;
+        width:70em;
+    }
+    
+}
+.container-fluid {
+    width:70rem;
+    height:30rem
+  }
+.slide-num{
+    display: flex;
+    margin-left: 6rem;
+    flex-direction: column;
+}
+#trash{
+    background-color: white;
+    border: none;
+}
+.container{
+    display: flex;
+    
+}
+.div1{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 1rem 0rem;
+    input{
+        width:50rem;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}
+.form-button {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+  
+  
+  
+  
+  
