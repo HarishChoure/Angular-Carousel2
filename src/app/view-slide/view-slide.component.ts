@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import {  FormGroup, FormControl , Validator, Validators} from '@angular/forms';
+import {  FormGroup, FormControl , Validators} from '@angular/forms';
 @Component({
   selector: 'app-view-slide',
   templateUrl: './view-slide.component.html',

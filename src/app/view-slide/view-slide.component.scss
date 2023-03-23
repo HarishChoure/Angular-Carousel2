@@ -1,4 +1,10 @@
+$button-color :blue;
+$white:white;
+$warning :color;
 h1{
+    margin-left: 6rem;
+}
+h2{
     margin-left: 6rem;
 }
 //Slider css
@@ -6,10 +12,10 @@ h1{
     display: flex;
     margin:0%;
     img{
-        height: 30em;
-        width:70em;
+        height: 480px;
+        width:  1096px;
+        object-fit : cover;
     }
-    
 }
 //slider container css
 .container-fluid {
@@ -23,13 +29,12 @@ h1{
     flex-direction: column;
 }
 #trash{
-    background-color: white;
+    background-color: $white;
     border: none;
 }
 //Form css
-.container{
-    display: flex;
-    
+.warning{
+    color:red;
 }
 //Div container css
 .div1{
@@ -37,7 +42,7 @@ h1{
     flex-direction: column;
     margin: 1rem 1rem 1rem 0rem;
     input{
-        width:50rem;
+        width:100%;
         border: 1px solid grey;
         border-radius: 5px;
         padding: 5px;
@@ -46,9 +51,9 @@ h1{
 //Button css
 .form-button {
     color: white;
-    background-color: blue;
+    background-color: $button-color;
     padding: 10px;
-    border: 1px solid blue;
+    border-style:none;
     border-radius: 5px;
 }
   
